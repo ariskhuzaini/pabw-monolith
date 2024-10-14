@@ -111,9 +111,9 @@ def searchcarinput():
     # Render the search page with an empty form
     return render_template('searchcar.html')
 
-@app.route('/help')
-def help():
-    return "ini halaman Helps"
+# @app.route('/help')
+# def help():
+#     return "ini halaman Helps"
 
 
 if __name__ == '__main__':
