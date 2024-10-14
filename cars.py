@@ -101,14 +101,9 @@ def searchcar():
 def searchcarinput():
     if request.method == 'POST':
         search_term = request.form.get('searchTerm')
-        
-        # Query the database for cars with a name that contains the search term
         results = TBCars.select().where(TBCars.carname.contains(search_term))
         
-        # Render the results page with matching cars
         return render_template('searchcar.html', results=results)
-    
-    # Render the search page with an empty form
     return render_template('searchcar.html')
 
 # @app.route('/help')
